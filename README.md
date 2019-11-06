@@ -4,8 +4,6 @@ react-native-web 的基本原理，就是将 react-native 的组件，针对web�
 
 很多同学比较关心的是，对于现有的 RN 项目，如何将 react-native-web 整合进去，下文会通过简单的例子逐步进行说明。
 
-文中示例代码可以在这里找到。
-
 ## 二、新建RN项目
 
 下面例子来自[官方文档](https://facebook.github.io/react-native/docs/getting-started)，经过一定程度的简化，建议查看原文档。
@@ -96,30 +94,33 @@ module.exports = {
 		path: path.resolve(__dirname, 'build'),
 	},
 	mode: 'development',
-    module: {
+	module: {
 		rules: [
 			{
 				test: /\.js$/,
 				exclude: /(node_modules|bower_components)/,
 				use: {
-					loader: 'babel-loader'
+					loader: 'babel-loader',
+					// options: {
+					// 	presets: ['@babel/preset-env']
+					// }
 				}
-			}			
+			}
 		]
 	},
 
-  	resolve: {
-    	alias: {
-    		'react-native$': 'react-native-web'
-    	}
-  	},
-	
+	resolve: {
+		alias: {
+			'react-native$': 'react-native-web'
+		}
+	},
+
 	devServer: {
 		contentBase: path.join(__dirname, '.'),
 		// compress: true,
 		port: 9000
 	}
-};
+}
 ```
 
 最重要的就是这几行：
