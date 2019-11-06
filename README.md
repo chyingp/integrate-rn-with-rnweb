@@ -126,11 +126,11 @@ module.exports = {
 最重要的就是这几行：
 
 ```javascript
-  	resolve: {
-    	alias: {
-    		'react-native$': 'react-native-web'
-    	}
-  	}
+resolve: {
+	alias: {
+		'react-native$': 'react-native-web'
+	}
+}
 ```
 
 ### NPM 脚本
