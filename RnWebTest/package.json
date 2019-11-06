@@ -1,0 +1,38 @@
+{
+  "name": "RnWebTest",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "android": "react-native run-android",
+    "ios": "react-native run-ios",
+    "start": "react-native start",
+    "test": "jest",
+    "dev": "webpack-dev-server",
+    "build": "webpack"
+  },
+  "dependencies": {
+    "react-native": "0.61.3",
+    "react-native-web": "^0.11.7"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.5.0",
+    "@babel/preset-env": "^7.7.1",
+    "@babel/preset-flow": "^7.0.0",
+    "@babel/preset-react": "^7.7.0",
+    "@babel/runtime": "^7.5.0",
+    "@react-native-community/eslint-config": "^0.0.3",
+    "babel-jest": "^24.1.0",
+    "babel-loader": "^8.0.6",
+    "jest": "^24.1.0",
+    "metro-react-native-babel-preset": "^0.51.1",
+    "react": "^16.8.1",
+    "react-dom": "^16.11.0",
+    "react-test-renderer": "16.8.1",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10",
+    "webpack-dev-server": "^3.9.0"
+  },
+  "jest": {
+    "preset": "react-native"
+  }
+}
